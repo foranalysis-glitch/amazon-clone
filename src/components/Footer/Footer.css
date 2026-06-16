@@ -1,0 +1,30 @@
+.footer {
+  background: #232f3e;
+  color: white;
+
+  text-align: left;
+ width: 100%;
+  overflow-x: hidden;
+  padding: 30px;
+ display: flex;
+  justify-content: space-around;
+ 
+}
+
+
+.back-top {
+  background: lightskyblue;
+  color: black;
+  text-align: center;
+  padding: 15px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .categories {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}

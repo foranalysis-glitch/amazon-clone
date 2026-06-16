@@ -1,0 +1,15 @@
+.categories {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.category-box {
+  background: white;
+  color: black;
+  width: 220px;
+  padding: 30px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}

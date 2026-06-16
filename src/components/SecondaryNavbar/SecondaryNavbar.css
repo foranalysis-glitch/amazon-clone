@@ -1,0 +1,22 @@
+.secondary-navbar {
+  background-color: #232f3e;
+  color: royalblue;
+
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 10px 20px;
+}
+
+.menu-item {
+  cursor: pointer;
+  padding: 5px 8px;
+
+  border: 1px solid transparent;
+}
+
+.menu-item:hover {
+  border: 1px solid white;
+}

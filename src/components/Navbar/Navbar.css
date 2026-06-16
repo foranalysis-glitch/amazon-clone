@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  background-color: #131921;
+  color: royalblue;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px 20px;
+}
+
+.navbar-item {
+  padding: 8px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.navbar-item:hover {
+  border: 1px solid white;
+}
+
+.nav-logo {
+  cursor: pointer;
+}
+
+.nav-location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.nav-location p,
+.nav-signin p,
+.nav-orders p {
+  font-size: 12px;
+}
+
+.nav-location h4,
+.nav-signin h4,
+.nav-orders h4 {
+  font-size: 14px;
+}
+
+.nav-search {
+  display: flex;
+  width: 500px;
+}
+
+.nav-search input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+.nav-search button {
+  width: 50px;
+  border: none;
+  background: #febd69;
+  cursor: pointer;
+}
+
+.nav-cart {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+
+
+/*  yha se mene apne wb page k liye all screen responsive code likha h*/
+
+
+/*  @media feature h css ka use for create web page all screen responsive       */
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .navbar-item {
+    text-align: center;
+  }
+  .search-bar {
+    width: 100%;
+  }
+
+  .secondary-navbar {
+    overflow-x: auto;
+
+    /* use for control the overflow of left to right screen       */
+  }
+
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .nav-logo,
+  .nav-location,
+  .nav-signin,
+  .nav-orders,
+  .nav-cart {
+    width: 100%;
+    text-align: left;
+  }
+}
