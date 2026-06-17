@@ -7,8 +7,8 @@ body{
   background:#eaeded;
 }
 .navbar {
-  background-color: #131921;
-  color: royalblue;
+ background-color: #131921;
+color: gray;
 
   display: flex;
   align-items: center;
