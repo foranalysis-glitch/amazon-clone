@@ -1,22 +1,50 @@
 .secondary-navbar {
   background-color: #232f3e;
-  color: royalblue;
+  color: white;
 
   display: flex;
   align-items: center;
-
   gap: 20px;
 
   padding: 10px 20px;
+
+  overflow-x: auto;
+  white-space: nowrap;
+
+  scrollbar-width: none;
+}
+
+.secondary-navbar::-webkit-scrollbar {
+  display: none;
 }
 
 .menu-item {
   cursor: pointer;
-  padding: 5px 8px;
+  padding: 6px 10px;
 
   border: 1px solid transparent;
+
+  flex-shrink: 0;
+
+  transition: all 0.2s ease;
 }
 
 .menu-item:hover {
   border: 1px solid white;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 768px) {
+
+  .secondary-navbar {
+    gap: 12px;
+    padding: 10px;
+  }
+
+  .menu-item {
+    font-size: 14px;
+    padding: 5px 8px;
+  }
+
 }

@@ -1,9 +1,28 @@
-.Hero {
+.hero {
+  background: black;
   width: 100%;
+  overflow: hidden;
 }
 
-.Hero img {
+.hero img {
   width: 100%;
-  height: 450px;
+  height: auto;
+  display: block;
   object-fit: cover;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  .hero img {
+    height: 180px;
+  }
+}
+
+/* Small Mobile */
+
+@media (max-width: 480px) {
+  .hero img {
+    height: 140px;
+  }
 }

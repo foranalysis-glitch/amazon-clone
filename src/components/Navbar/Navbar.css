@@ -3,7 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body{
+  background:#eaeded;
+}
 .navbar {
   background-color: #131921;
   color: royalblue;
@@ -81,47 +83,36 @@
 
 
 /*  @media feature h css ka use for create web page all screen responsive       */
+/* Mobile Responsive */
+
 @media (max-width: 768px) {
 
   .navbar {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .navbar-item {
-    text-align: center;
-  }
-  .search-bar {
-    width: 100%;
-  }
-
-  .secondary-navbar {
-    overflow-x: auto;
-
-    /* use for control the overflow of left to right screen       */
-  }
-
-  .products {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-}
-
-
-
-@media (max-width: 768px) {
-  .navbar {
-    display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 10px;
     padding: 10px;
   }
 
-  .nav-logo,
+  .nav-logo {
+    width: 100%;
+    text-align: center;
+  }
+
   .nav-location,
   .nav-signin,
   .nav-orders,
   .nav-cart {
-    width: 100%;
-    text-align: left;
+    flex: 1;
+    min-width: 120px;
   }
+
+  .nav-search {
+    width: 100%;
+    order: 10;
+  }
+
+  .nav-search input {
+    width: 100%;
+  }
+
 }
