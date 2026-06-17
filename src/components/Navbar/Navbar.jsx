@@ -1,47 +1,50 @@
 import "./Navbar.css";
-import { FaLocationDot } from "react-icons/fa6";
 import { FaSearch } from "react-icons/fa";
-import { FaShoppingCart } from "react-icons/fa";
+import { BsCart3 } from "react-icons/bs";
+import { FaUserCircle } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 
 function Navbar() {
   return (
-    <div className="navbar">
+    <>
+      <div className="navbar">
 
-      <div className="nav-logo">
-        <h2>Amazon</h2>
+        <div className="mobile-menu">
+          <FaBars />
+        </div>
+
+        <div className="nav-logo">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJEsLucn6b9xPwccsc6dyYNBBCfpJ8-tVMUQ&s"
+            alt="Amazon"
+          />
+        </div>
+
+        <div className="mobile-user">
+          <FaUserCircle />
+        </div>
+
+        <div className="nav-cart">
+          <BsCart3 />
+          <span>Cart</span>
+        </div>
+
       </div>
 
-      <div className="navbar-item">
-          <FaLocationDot />
-          <div>
-        <p>Deliver in</p>
-        <h4>India</h4>
-      </div>
-      </div>
       <div className="nav-search">
         <input
           type="text"
           placeholder="Search Amazon"
         />
-        <button><FaSearch /></button>
+        <button>
+          <FaSearch />
+        </button>
       </div>
 
-      <div className="navbar-item">
-        <p>Hello user, Sign in here</p>
-        <h4>Account & Lists</h4>
+      <div className="mobile-location">
+        📍 Deliver in India
       </div>
-
-      <div className="navbar-item">
-        <p> your Returns</p>
-        <h4>& your Orders</h4>
-      </div>
-
-      <div className="navbar-item">
-          <FaShoppingCart />
-        <h4>your Cart</h4>
-      </div>
-
-    </div>
+    </>
   );
 }
 

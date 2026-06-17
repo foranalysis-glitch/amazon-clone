@@ -3,9 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-body{
-  background:#eaeded;
-}
+
 .navbar {
  background-color: #131921;
 color: gray;
@@ -14,8 +12,38 @@ color: gray;
   align-items: center;
   justify-content: space-between;
 
-  padding: 12px 20px;
+  padding: 10px 20px;
 }
+
+.mobile-menu,
+.mobile-user {
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.mobile-menu,
+.mobile-user{
+  display: none;
+}
+
+.nav-logo img {
+  width: 110px;
+}
+
+.nav-cart {
+  font-size: 28px;
+}
+
+.mobile-location {
+  background: #37475a;
+  color: white;
+  padding: 12px;
+  font-size: 14px;
+ 
+  display:none;
+
+}
+
 
 .navbar-item {
   padding: 8px;
@@ -27,9 +55,7 @@ color: gray;
   border: 1px solid white;
 }
 
-.nav-logo {
-  cursor: pointer;
-}
+
 
 .nav-location {
   display: flex;
@@ -38,35 +64,34 @@ color: gray;
   cursor: pointer;
 }
 
-.nav-location p,
-.nav-signin p,
-.nav-orders p {
-  font-size: 12px;
-}
 
-.nav-location h4,
-.nav-signin h4,
-.nav-orders h4 {
-  font-size: 14px;
-}
+
+
 
 .nav-search {
   display: flex;
-  width: 500px;
-}
-
-.nav-search input {
   flex: 1;
-  padding: 10px;
-  border: none;
-  outline: none;
+  max-width: 700px;
+  margin: 0 20px;
 }
 
-.nav-search button {
-  width: 50px;
-  border: none;
-  background: #febd69;
-  cursor: pointer;
+.nav-search input{
+  flex:1;
+  height: 40px;
+  padding: 0 12px;
+  border:none;
+  outline:none;
+  color: black;
+}
+
+.nav-search button{
+  width:50px;
+  border:none;
+
+  color: black;
+  background:#febd69;
+  cursor:pointer;
+ 
 }
 
 .nav-cart {
@@ -74,6 +99,7 @@ color: gray;
   align-items: center;
   gap: 5px;
   cursor: pointer;
+
   font-size: 20px;
 }
 
@@ -88,9 +114,10 @@ color: gray;
 @media (max-width: 768px) {
 
   .navbar {
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 10px;
+     display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px;
   }
 
   .nav-logo {
@@ -98,21 +125,32 @@ color: gray;
     text-align: center;
   }
 
+.nav-logo img{
+  width:90px;
+}
+
   .nav-location,
   .nav-signin,
-  .nav-orders,
+  .nav-orders{
+      display:none;
+  
+  }
   .nav-cart {
     flex: 1;
     min-width: 120px;
+    font-size:24px;
+
   }
 
   .nav-search {
     width: 100%;
-    order: 10;
+    padding: 10px;
+    margin: 0;
   }
 
   .nav-search input {
     width: 100%;
+    height: 45px;
   }
 
 }
