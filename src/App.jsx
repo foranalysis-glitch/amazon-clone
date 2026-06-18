@@ -1,7 +1,14 @@
+import { useState } from "react";
 import Home from "./Pages/Home";
 
 const App = () => {
-  return <Home />;
+ const [searchTerm, setSearchTerm] = useState("");
+
+  return (
+  <Home
+   searchTerm={searchTerm}
+      setSearchTerm={setSearchTerm}
+     />);
 };
 
 export default App;

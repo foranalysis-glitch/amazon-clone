@@ -4,7 +4,7 @@ import { BsCart3 } from "react-icons/bs";
 import { FaUserCircle } from "react-icons/fa";
 import { FaBars } from "react-icons/fa";
 
-function Navbar() {
+function Navbar({ searchTerm, setSearchTerm }) {
   return (
     <>
       <div className="navbar">
@@ -32,10 +32,13 @@ function Navbar() {
       </div>
 
       <div className="nav-search">
-        <input
-          type="text"
-          placeholder="Search Amazon"
-        />
+       <input
+  type="text"
+  placeholder="Search Amazon"
+  value={searchTerm}
+  onChange={(e) => setSearchTerm(e.target.value)}
+/>
+
         <button>
           <FaSearch />
         </button>

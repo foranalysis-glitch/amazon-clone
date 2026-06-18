@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Navbar from "../components/Navbar/Navbar.jsx";
 import SecondaryNavbar from "../components/SecondaryNavbar/SecondaryNavbar.jsx";
 import Hero from "../components/hero/Hero.jsx";
@@ -6,15 +7,21 @@ import ProductSection from "../components/ProductSection/ProductSection.jsx";
 import Footer from "../components/Footer/Footer.jsx";
 
 function Home() {
+
+    const [searchTerm, setSearchTerm] = useState("");
+
   return (
     <>
-      <Navbar />
+      <Navbar
+        searchTerm={searchTerm}
+        setSearchTerm={setSearchTerm}
+         />
       <SecondaryNavbar />
       <Hero />
 
       <CategorySection />
 
-      <ProductSection />
+      <ProductSection  searchTerm={searchTerm} />
 
       <Footer />
     </>
