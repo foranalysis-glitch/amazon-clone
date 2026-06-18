@@ -1,6 +1,6 @@
 import "./ProductSection.css";
 import ProductCard from "../ProductCard/ProductCard.jsx";
-import { products } from "../../data/products.js";
+import { products } from "../../data/Products.js";
 function  ProductSection({ searchTerm }) {
 
    const filteredProducts = products.filter((product) =>
